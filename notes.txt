@@ -1,0 +1,1 @@
+label > hover la propriété dans l'inspector pour avoir son nom à travers le script
