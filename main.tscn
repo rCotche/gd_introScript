@@ -3,21 +3,14 @@
 [ext_resource type="Script" path="res://main.gd" id="1_fvdgw"]
 [ext_resource type="Script" path="res://character.gd" id="2_q6dky"]
 
-[node name="Main" type="Node" node_paths=PackedStringArray("character_to_kill")]
+[node name="Main" type="Node"]
 script = ExtResource("1_fvdgw")
-character_to_kill = NodePath("Character")
 
 [node name="Character" type="Node" parent="."]
 script = ExtResource("2_q6dky")
-profession = "potion seller"
-health = 50
 
 [node name="Character2" type="Node" parent="."]
 script = ExtResource("2_q6dky")
-profession = "ex-adventurer"
-health = 30
 
 [node name="Character3" type="Node" parent="."]
 script = ExtResource("2_q6dky")
-profession = "knight"
-health = 150

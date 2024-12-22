@@ -2,9 +2,16 @@ class_name Character
 
 extends Node
 
-@export var profession: String
-@export var health: int
+#instantiate a var de type Equipement
+var chest := Equipement.new()
+var legs := Equipement.new()
 
-func die():
-	health = 0
-	print(profession + " died.")
+func _ready() -> void:
+	chest.armor = 20
+	print(chest.armor)
+	print(legs.weight)
+
+#inner class
+class Equipement:
+	var armor := 10
+	var weight := 5
