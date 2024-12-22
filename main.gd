@@ -1,27 +1,15 @@
 extends Node
 
-func _ready() -> void:
-	#declare dictionaries
-	#var dict = {}
-	#var players = {
-		#"Crook":1,
-		#"Villain":35,
-		#"Boss":100,
-	#}
-	#
-	#print(players["Villain"])
-	#
-	#players["Villain"] = 50
-	#players["Dwayne"] = 999
-	#
-	#for username in players:
-		#print(username + ": " + str(players[username]))
+#declare enum
+#enum Alignement { ALLY, NEUTRAL, ENEMY }
+enum Alignement { ALLY = 1, NEUTRAL = 0, ENEMY = -1 }
 
-	var players = {
-		"Crook":		{"Level": 1, "Health": 80},
-		"Villain": 	{"Level": 50, "Health": 150},
-		"Boss": 	{"Level": 100, "Health": 500},
-	}
-	
-	print(players["Boss"]["Health"])
-	
+#var unit_alignement = Alignement.ALLY
+@export var unit_alignement: Alignement
+
+func _ready() -> void:
+	#if unit_alignement == Alignement.ENEMY:
+		#print("get out")
+	#else:
+		#print("welcome")
+	print(Alignement.ENEMY)
