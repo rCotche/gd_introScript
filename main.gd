@@ -1,20 +1,12 @@
 extends Node
 
-#declare enum
-#enum Alignement { ALLY, NEUTRAL, ENEMY }
-enum Alignement { ALLY = 1, NEUTRAL = 0, ENEMY = -1 }
-
-#var unit_alignement = Alignement.ALLY
-@export var unit_alignement: Alignement
+#@onready make sure all node r loaded
+#$ = get_node("")
+#path relative
+#@onready var weapon: Sprite2D = $Player/Weapon
+#@export var my_node: Node
+@export var my_node: Sprite2D
 
 func _ready() -> void:
-	#equivalent de switch
-	match unit_alignement:
-		Alignement.ALLY:
-			print("hey bro")
-		Alignement.NEUTRAL:
-			print("come in peace")
-		Alignement.ENEMY:
-			print("Surprise ....")
-		_:
-			print("tf u r")
+	if my_node is Node2D:
+		print("is 2d")
