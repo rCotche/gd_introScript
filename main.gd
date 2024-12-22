@@ -1,30 +1,28 @@
 extends Node
 
+#signal health_changed(new_health)
+#
+#var health := 100:
+	##define setter for this var
+	#set(value):
+		## make sure health never below 0 or greater than 100
+		#health = clamp(value, 0, 100)
+		#health_changed.emit(health)
+#
 #func _ready() -> void:
-	#pass
+	#health = -150
 #
-#
-#func _on_button_pressed() -> void:
-	#print("Money")
+#func _on_health_changed(new_health: Variant) -> void:
+	#print(new_health)
 
-#creat a signal
-#signal level_up
-signal level_up(msg)
+var chance := 0.2
+var chance_percentage: int:
+	get:
+		return chance * 100
+	set(value):
+		chance = float(value) / 100
 
-var xp := 0
-
-#connect signal througt code
 func _ready() -> void:
-	level_up.connect(_on_level_up)# pas besoin de parenthese
-	#level_up.disconnect(_on_level_up)# pas besoin de parenthese
-
-func _on_timer_timeout() -> void:
-	xp += 5
-	print(xp)
-	if xp >= 20:
-		xp = 0
-		level_up.emit("nice")# trigger le signal
-
-
-func _on_level_up(msg) -> void:
-	print(msg)
+	print(chance_percentage)
+	chance_percentage = 40
+	print(chance_percentage)
