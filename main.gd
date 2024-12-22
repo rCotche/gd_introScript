@@ -1,20 +1,27 @@
 extends Node
 
 func _ready() -> void:
-	##var items = ["Potion", 3, 6]
-	#var items: Array[String] = ["Potion", "Feather", "Stolen harp"]
-	##foreach equivalent
-	#for item in items:
-		#print(item)
+	#declare dictionaries
+	#var dict = {}
+	#var players = {
+		#"Crook":1,
+		#"Villain":35,
+		#"Boss":100,
+	#}
+	#
+	#print(players["Villain"])
+	#
+	#players["Villain"] = 50
+	#players["Dwayne"] = 999
+	#
+	#for username in players:
+		#print(username + ": " + str(players[username]))
+
+	var players = {
+		"Crook":		{"Level": 1, "Health": 80},
+		"Villain": 	{"Level": 50, "Health": 150},
+		"Boss": 	{"Level": 100, "Health": 500},
+	}
 	
-	#n = iteration of the loop
-	#for n in 8:
-		#print(n)
-	var glass := 0.0
+	print(players["Boss"]["Health"])
 	
-	while glass < 0.5:
-		glass += randf_range(0.01, 0.2)
-		print(glass)
-		if glass > 0.2:
-			break #sort de la boucle & continue skip iteration
-	print("glass half full")
