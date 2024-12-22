@@ -5,3 +5,9 @@ label > hover la propriété dans l'inspector pour avoir son nom à travers le s
 
 ========================
 project > project settings > input map > add action
+
+========================
+signals
+click sur l'icone verte pour savoir la source du signal
+
+click droit sur le signal connected puis selection deconnect pour deconneter le signal
