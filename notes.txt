@@ -1,4 +1,5 @@
 ctrl + k = comment
+ctrl + click sur une fonction par exemple = documentation
 ========================
 label > hover la propriété dans l'inspector pour avoir son nom à travers le script
 

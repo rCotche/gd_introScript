@@ -1,13 +1,13 @@
 extends Node
 
 func _ready() -> void:
-	#random numbres between 0 et 1
-	#randf()
-	#var roll = randf()
-	#if roll <= 0.8:
-		#print("common item")
-	#else:
-		#print("rare item")
-	#random intger betwenn 2 values
-	var character_height = randi_range(140, 210)
-	print("character height : " + str(character_height) + " cm.")
+	#var items = ["Potion", 3, 6]
+	var items: Array[String] = ["Potion", "Feather", "Stolen harp"]
+	#update an element in array
+	items[1] = "Smelly socks"
+	items[2] = "Staff"
+	
+	#delete un element à l'index
+	items.remove_at(1)
+	items.append("overpowerd sword")
+	print(items[0])
