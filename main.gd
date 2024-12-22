@@ -8,8 +8,13 @@ enum Alignement { ALLY = 1, NEUTRAL = 0, ENEMY = -1 }
 @export var unit_alignement: Alignement
 
 func _ready() -> void:
-	#if unit_alignement == Alignement.ENEMY:
-		#print("get out")
-	#else:
-		#print("welcome")
-	print(Alignement.ENEMY)
+	#equivalent de switch
+	match unit_alignement:
+		Alignement.ALLY:
+			print("hey bro")
+		Alignement.NEUTRAL:
+			print("come in peace")
+		Alignement.ENEMY:
+			print("Surprise ....")
+		_:
+			print("tf u r")
