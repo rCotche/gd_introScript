@@ -11,3 +11,12 @@ signals
 click sur l'icone verte pour savoir la source du signal
 
 click droit sur le signal connected puis selection deconnect pour deconneter le signal
+========================
+call down signal ip
+
+good pratice
+parent node call function to node below
+
+child node use signal to cummunicate that something happen, then node above connect to those signals
+
+to communicate between 2 node at the same level in the hierachy, it's the parent node that use a signal 
